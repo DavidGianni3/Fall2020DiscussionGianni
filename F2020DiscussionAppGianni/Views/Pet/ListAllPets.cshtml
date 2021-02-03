@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Pet>
+
+<h4>ListAllPets</h4>
+
+<table class="table table-bordered table-striped">
+
+    <thead>
+        <tr>
+            <th>Pet Name</th><th>Pet Type</th><th>Pet Gender</th><th>Pet Date of Birth</th>
+            <th>Request Date and Status</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach(Pet eachPet in Model)
+        {
+        <tr>
+            @if (eachPet.PetName != null)
+            {
+                <td>@eachPet.PetName</td>
+            }
+
+            <td>@eachPet.PetType</td>
+            <td>@eachPet.PetGender</td>
+
+            @if (eachPet.PetDateOfBirth.HasValue)
+            {
+                <td>@eachPet.PetDateOfBirth.Value.ToShortDateString()  </td>
+            }
+            else
+            {
+                <td>@("Date of Birth Unknown")</td>
+            }
+            <td>
+                @foreach (VoucherRequest eachRequest in eachPet.VoucherRequestsForPet)
+                {
+
+                    @(eachRequest.RequestDate.ToShortDateString() +" " + eachRequest.RequestStatus)<br />
+                
+                 }
+            </td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>

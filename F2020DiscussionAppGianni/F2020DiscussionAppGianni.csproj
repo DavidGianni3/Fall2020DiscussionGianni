@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-F2020DiscussionAppGianni-7E208BF6-4CB1-404D-A658-16811DEA7ED8</UserSecretsId>
+    <OutputType>WinExe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20201001150624_AddedVoucherRequest.cs" />
+    <Compile Remove="Data\Migrations\20201001150624_AddedVoucherRequest.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201006145624_AddedRequestStatusToVoucherRequest.cs" />
+    <Compile Remove="Data\Migrations\20201006145624_AddedRequestStatusToVoucherRequest.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201116204230_AddedFundForVoucherCriteriaAndFundAndModVoucherRequest.cs" />
+    <Compile Remove="Data\Migrations\20201116204230_AddedFundForVoucherCriteriaAndFundAndModVoucherRequest.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201116204344_AddedFundForVoucherCriteriaAndFundAndModVoucherRequest.cs" />
+    <Compile Remove="Data\Migrations\20201116204344_AddedFundForVoucherCriteriaAndFundAndModVoucherRequest.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201116205713_AddedFundForVoucherCriteriaAndFundAndModVoucherRequest.cs" />
+    <Compile Remove="Data\Migrations\20201116205713_AddedFundForVoucherCriteriaAndFundAndModVoucherRequest.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.7" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+  </ItemGroup>
+
+</Project>
